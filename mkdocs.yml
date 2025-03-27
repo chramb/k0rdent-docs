@@ -233,6 +233,8 @@ markdown_extensions:
       permalink: "#"
       toc_depth: 3
   - def_list
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
   docs_repo_name: k0rdent/docs
