@@ -243,4 +243,4 @@ velero-8-1-0              true
 ```
 ## Next steps
 
-Your QuickStart management node is now complete, and {{{ docsVersionInfo.k0rdentName }}} is installed and operational. Next, it's time to select [AWS](quickstart-2-aws.md) or [Azure](quickstart-2-azure.md) as an environment for hosting managed clusters.
+Your QuickStart management node is now complete, and {{{ docsVersionInfo.k0rdentName }}} is installed and operational. Next, it's time to select [AWS](quickstart-2-aws.md), [Azure](quickstart-2-azure.md) or [OpenStack](quickstart-2-openstack.md) as an environment for hosting managed clusters.

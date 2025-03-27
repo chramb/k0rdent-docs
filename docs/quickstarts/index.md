@@ -64,7 +64,6 @@ QuickStarts for other Kubernetes distros, clouds, and environments will appear i
 * **AWS EKS hosted** &mdash; Amazon Elastic Kubernetes Service managed clusters 
 * **Azure AKS hosted** &mdash; Azure Kubernetes Service
 * **vSphere standalone** &mdash; k0s Kubernetes on vSphere virtual machines
-* **OpenStack standalone** &mdash; k0s Kubernetes on OpenStack virtual machines
 
 Plus (intermediate-term roadmap) tutorials for using {{{ docsVersionInfo.k0rdentName }}} to create and manage hybrid, edge, and distributed platforms with Kubernetes-hosted control planes and workers on local or remote substrates will be available soon.
 
@@ -81,3 +80,4 @@ Next you'll want to learn how to:
 - [Set up Management Node and Cluster](quickstart-1-mgmt-node-and-cluster.md)
 - [Configure and Deploy to AWS](quickstart-2-aws.md)
 - [Configure and Deploy to Azure](quickstart-2-azure.md)
+- [Configure and Deploy to OpenStack](quickstart-2-openstack.md)
