@@ -3434,12 +3434,12 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
 <p>Before beginning KOF installation, you should have the following components in place:</p>
 <ul>
-<li>A k0rdent management cluster - You can get instructions to create one in the <a href="https://docs.k0rdent.io/v0.1.0/quickstart-1-mgmt-node-and-cluster/">quickstart guide</a><ul>
+<li>A k0rdent management cluster - You can get instructions to create one in the <a href="https://docs.k0rdent.io/v0.2.0/quickstart-1-mgmt-node-and-cluster/">quickstart guide</a><ul>
 <li>To test on <a href="https://docs.k0sproject.io/stable/system-requirements/#host-operating-system">macOS</a> you can install using:
   <code>brew install kind &amp;&amp; kind create cluster -n k0rdent</code></li>
 </ul>
 </li>
-<li>You will also need your infrastructure provider credentials, such as those shown in the <a href="https://docs.k0rdent.io/v0.1.0/quickstarts/quickstart-2-aws/">guide for AWS</a><ul>
+<li>You will also need your infrastructure provider credentials, such as those shown in the <a href="https://docs.k0rdent.io/v0.2.0/quickstarts/quickstart-2-aws/">guide for AWS</a><ul>
 <li>Note that you should skip the "Create your ClusterDeployment" and later sections.</li>
 </ul>
 </li>
@@ -3504,7 +3504,7 @@ and apply this example, or use it as a reference:</p>
 <li>
 <p>Install <code>kof-operators</code> required by <code>kof-mothership</code>:
     <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>--wait<span class="w"> </span>--create-namespace<span class="w"> </span>-n<span class="w"> </span>kof<span class="w"> </span>kof-operators<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-operators<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.1
+<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-operators<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.2.0
 </code></pre></div></p>
 </li>
 <li>
@@ -3559,15 +3559,15 @@ and apply this example, or use it as a reference:</p>
 <li>
 <p>Install <code>kof-mothership</code>:
     <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>--wait<span class="w"> </span>-f<span class="w"> </span>mothership-values.yaml<span class="w"> </span>-n<span class="w"> </span>kof<span class="w"> </span>kof-mothership<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-mothership<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.1
+<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-mothership<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.2.0
 </code></pre></div></p>
 </li>
 <li>
 <p>Install <a href="../kof-architecture/#kof-regional">kof-regional</a> and <a href="../kof-architecture/#kof-child">kof-child</a> charts into the management cluster:
     <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>--wait<span class="w"> </span>-n<span class="w"> </span>kof<span class="w"> </span>kof-regional<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-regional<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.1
+<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-regional<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.2.0
 helm<span class="w"> </span>install<span class="w"> </span>--wait<span class="w"> </span>-n<span class="w"> </span>kof<span class="w"> </span>kof-child<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-child<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.1
+<span class="w">  </span>oci://ghcr.io/k0rdent/kof/charts/kof-child<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.2.0
 </code></pre></div></p>
 </li>
 <li>
@@ -3592,7 +3592,7 @@ and apply this example for AWS, or use it as a reference:</p>
 <li>
 <p>Use the up-to-date <code>ClusterTemplate</code>, as in:
     <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>clustertemplate<span class="w"> </span>-n<span class="w"> </span>kcm-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>aws
-<span class="nv">TEMPLATE</span><span class="o">=</span>aws-standalone-cp-0-1-0
+<span class="nv">TEMPLATE</span><span class="o">=</span>aws-standalone-cp-0-2-0
 </code></pre></div></p>
 </li>
 <li>
@@ -3631,7 +3631,7 @@ and apply this example for AWS, or use it as a reference:</p>
 <p>For Azure:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">REGION</span><span class="o">=</span>AZURE_LOCATION
 <span class="nv">AZURE_SUBSCRIPTION_ID</span><span class="o">=</span>SUBSCRIPTION_ID_SUBSCRIPTION_ID
-<span class="nv">TEMPLATE</span><span class="o">=</span>azure-standalone-cp-0-1-0
+<span class="nv">TEMPLATE</span><span class="o">=</span>azure-standalone-cp-0-2-0
 cat<span class="w"> </span>&gt;regional-cluster.yaml<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
 <span class="s">apiVersion: k0rdent.mirantis.com/v1alpha1</span>
 <span class="s">kind: ClusterDeployment</span>
@@ -3679,7 +3679,7 @@ cat<span class="w"> </span>&gt;regional-cluster.yaml<span class="w"> </span><spa
 <span class="s">              enabled: true</span>
 <span class="s">      - name: kof-storage</span>
 <span class="s">        namespace: kof</span>
-<span class="s">        template: kof-storage-0-1-1</span>
+<span class="s">        template: kof-storage-0-2-0</span>
 <span class="s">        values: |</span>
 <span class="s">          external-dns:</span>
 <span class="s">            enabled: true</span>
@@ -3833,7 +3833,7 @@ and apply this example for AWS, or use it as a reference:</p>
 <li>
 <p>Use the up-to-date <code>ClusterTemplate</code>, as in:
     <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>clustertemplate<span class="w"> </span>-n<span class="w"> </span>kcm-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>aws
-<span class="nv">TEMPLATE</span><span class="o">=</span>aws-standalone-cp-0-1-0
+<span class="nv">TEMPLATE</span><span class="o">=</span>aws-standalone-cp-0-2-0
 </code></pre></div></p>
 </li>
 <li>
@@ -3906,10 +3906,10 @@ cat<span class="w"> </span>&gt;child-cluster.yaml<span class="w"> </span><span c
 <span class="s">              enabled: true</span>
 <span class="s">      - name: kof-operators</span>
 <span class="s">        namespace: kof</span>
-<span class="s">        template: kof-operators-0-1-1</span>
+<span class="s">        template: kof-operators-0-2-0</span>
 <span class="s">      - name: kof-collectors</span>
 <span class="s">        namespace: kof</span>
-<span class="s">        template: kof-collectors-0-1-1</span>
+<span class="s">        template: kof-collectors-0-2-0</span>
 <span class="s">        values: |</span>
 <span class="s">          global:</span>
 <span class="s">            clusterName: $CHILD_CLUSTER_NAME</span>
