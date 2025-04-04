@@ -586,15 +586,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-that-ksm-servicetemplate-objects-are-available" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verify that KSM ServiceTemplate objects are available
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next steps
@@ -3494,15 +3485,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-that-ksm-servicetemplate-objects-are-available" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verify that KSM ServiceTemplate objects are available
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       Next steps
@@ -3671,7 +3653,7 @@ chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>g
 <span class="go">cluster-api-provider-vsphere-0-2-0     true</span>
 <span class="go">k0smotron-0-2-0                        true</span>
 <span class="go">kcm-0-2-0                              true</span>
-<span class="go">projectsveltos-0-45-0                  true</span>
+<span class="go">projectsveltos-0-50-0                  true</span>
 </code></pre></div>
 <h2 id="verify-that-kcm-clustertemplate-objects-are-available">Verify that KCM ClusterTemplate objects are available<a class="headerlink" href="#verify-that-kcm-clustertemplate-objects-are-available" title="Permanent link">#</a></h2>
 <p>CAPI also requires control plane and bootstrap (worker node) providers to construct and/or manage different Kubernetes cluster distros and variants. Again, these providers are delivered and referenced within k0rdent using templates, instantiated in the management cluster as <code>ClusterTemplate</code> objects. Before continuing, verify that default <code>ClusterTemplate</code> objects are installed and valid:</p>
@@ -3690,22 +3672,8 @@ chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>g
 <span class="go">vsphere-hosted-cp-0-2-0         true</span>
 <span class="go">vsphere-standalone-cp-0-2-0     true</span>
 </code></pre></div>
-<h2 id="verify-that-ksm-servicetemplate-objects-are-available">Verify that KSM ServiceTemplate objects are available<a class="headerlink" href="#verify-that-ksm-servicetemplate-objects-are-available" title="Permanent link">#</a></h2>
-<p>k0rdent Service Manager (KSM) uses Service Templates to lifecycle manage services and applications installed on clusters. These, too, are represented as declarative templates, instantiated as <code>ServiceTemplate</code> objects. Check that default <code>ServiceTemplate</code> objects have been created and validated:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>servicetemplate<span class="w"> </span>-n<span class="w"> </span>kcm-system<span class="w">   </span><span class="c1"># list servicetemplate objects in the kcm-system namespace</span>
-</code></pre></div>
-<p>You should see output similar to:</p>
-<div class="highlight"><pre><span></span><code><span class="go">NAME                      VALID</span>
-<span class="go">cert-manager-1-16-2       true</span>
-<span class="go">dex-0-19-1                true</span>
-<span class="go">external-secrets-0-11-0   true</span>
-<span class="go">ingress-nginx-4-11-0      true</span>
-<span class="go">ingress-nginx-4-11-3      true</span>
-<span class="go">kyverno-3-2-6             true</span>
-<span class="go">velero-8-1-0              true</span>
-</code></pre></div>
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">#</a></h2>
-<p>Your QuickStart management node is now complete, and k0rdent is installed and operational. Next, it's time to select <a href="../quickstart-2-aws/">AWS</a> or <a href="../quickstart-2-azure/">Azure</a> as an environment for hosting managed clusters.</p>
+<p>Your QuickStart management node is now complete, and k0rdent is installed and operational. Next, it's time to select <a href="../quickstart-2-aws/">AWS</a>, <a href="../quickstart-2-azure/">Azure</a>, <a href="../quickstart-2-gcp/">GCP</a>, or <a href="../quickstart-2-remote/">Remote SSH Servers</a> as an environment for hosting managed clusters.</p>
 
 
 
